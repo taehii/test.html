@@ -1,0 +1,58 @@
+@import url('common.css');
+
+header{
+    width: 1000px;
+    margin: 0 auto;
+    padding:40px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header > h1{}
+header > h1 a{}
+
+header > nav{}
+header > nav > a{
+    display: inline-block;
+    margin: 0 20px;
+}
+header > nav > a::after{
+    content:'';
+    display: block; /* after은 inline요소이므로 */
+    border-bottom: 3px solid #000;
+    width: 0%;
+    transition: 0.5s;
+    margin: 0 auto;
+}
+header > nav > a:hover::after{
+    width:100%;
+}
+main{}
+.visual{position: relative;}
+.visual > img{width: 100%;}
+.visual > article{position: absolute; left:50% ; bottom:0%;
+background-color: #fff; padding:60px; 
+transform: translate(-50%,10%);  /* 중앙, +는 앞으로 이동*/
+/* box-shadow: x y blur color; */
+box-shadow: 0 0 30px rgba(0,0,0,0.4);
+transition: 0.5s;}
+.visual > article > h2{
+    font-size: 28px;
+    text-transform: uppercase; /* 대문자 */
+    margin-bottom: 30px;
+}
+.visual > article > figure{}
+.visual > article > figure > img{}
+.visual > article > figure > figcaption{text-align: center;}
+.visual > article > figure > figcaption > p{
+    padding:20px 0;
+}
+.visual > article > figure > figcaption > a{
+    background-color: #000;
+    color: #fff;
+    padding: 10px 30px;
+    text-transform: uppercase;
+}
+
+.visual:hover > article{
+    transform:translate(-50%, 0%);}
